@@ -1,0 +1,11 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Audio outputs (sehr groß)
+audio_factory/releases/
+
+# OS / Editor
+.DS_Store
+.vscode/

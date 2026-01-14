@@ -1,0 +1,42 @@
+﻿project_name: "Deep Sleep Lab"
+album_name: "Deep Sleep Noise Vol. 1"
+
+audio:
+  duration_hours: 0.01
+  sample_rate: 32000
+  target_rms_db: -20.0     # konservativ, verhindert Clipping/Overloud
+  fade_seconds: 15
+  highpass_hz: 18          # entfernt DC/ultra-low drift
+  lowpass_hz: 1200         # hält es angenehm, weniger harsh
+
+track:
+  title: "Brown Noise for Deep Sleep (2 Hours)"
+  genre: "Ambient"
+  mood: ["Sleep", "Relax"]
+  description: "{hours} hours {title}. Non-looping, steady, low-variance."
+
+output:
+  release_root: "releases"
+  filename_base: "deep_sleep_lab_brown_noise_2h"
+
+batch:
+  - preset: "brown_noise"
+    title: "Brown Noise for Deep Sleep (2 Hours)"
+    filename_base: "deep_sleep_lab_brown_noise_2h"
+    target_rms_db: -24.0
+    peak_ceiling_linear: 0.70
+  - preset: "fan_noise"
+    title: "Fan Noise for Sleeping (2 Hours)"
+    filename_base: "deep_sleep_lab_fan_noise_2h"
+    target_rms_db: -24.0
+    peak_ceiling_linear: 0.70
+  - preset: "rain_window"
+    title: "Rain on Window for Sleep (2 Hours)"
+    filename_base: "deep_sleep_lab_rain_window_2h"
+    target_rms_db: -20.0
+    peak_ceiling_linear: 0.98
+  - preset: "ocean_waves"
+    title: "Ocean Waves for Sleeping (2 Hours)"
+    filename_base: "deep_sleep_lab_ocean_waves_2h"
+    target_rms_db: -20.0
+    peak_ceiling_linear: 0.98
